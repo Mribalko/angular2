@@ -1,5 +1,13 @@
 <div class="list-group">
 
-    <pokemon-list-item pokemon="singlePokemon" ng-repeat="singlePokemon in $ctrl.pokemons"></pokemon-list-item>
+    <!--<pokemon-list-item pokemon="singlePokemon" ng-repeat="singlePokemon in $ctrl.pokemons"></pokemon-list-item>-->
+
+    <md-list-item class="md-3-line" ng-repeat="singlePokemon in $ctrl.pokemons" ng-href="#!/pokemons/{{singlePokemon.objectId}}">
+            <div class="md-list-item-text" layout="column">
+            <h3>{{ singlePokemon.name }}</h3>
+            <h4> Вес: {{ singlePokemon.weight }}</h4>
+            <p> Рост: {{ singlePokemon.height }}</p>
+        </div>
+    </md-list-item>
 
 </div>
